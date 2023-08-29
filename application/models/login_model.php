@@ -8,7 +8,7 @@ class login_model extends CI_Model
     {
         $this->db->where("username", $username);
         $this->db->where("password", $password);
-        return $this->db->get('user');
+        return $this->db->get('pengguna');
     }
 
     public function getDataLogin($user, $pass)
@@ -16,7 +16,7 @@ class login_model extends CI_Model
         $u = $user;
         $p = $pass;
 
-        $query_cekLogin = $this->db->get_where('user', array('username' => $u, 'password' => $p));
+        $query_cekLogin = $this->db->get_where('pengguna', array('username' => $u, 'password' => $p));
 
         if ($query_cekLogin->num_rows() > 0) {
             $user_data = $query_cekLogin->row(); // Fetch the first row (assuming username and password are unique)

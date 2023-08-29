@@ -26,7 +26,9 @@ foreach ($query->result() as $a) {
                         <input type="text" class="form-control" id="nama" value="<?= $this->session->userdata('nama'); ?>" readonly>
                     </div>
                 </div>
+                <input type="hidden" id="id_user" name="id_user" value="<?= $id_user ?>">
                 <input type="hidden" id="id_pengguna" name="id_pengguna" value="<?= $pengguna['id_pengguna']; ?>">
+                <!-- <input type="hidden" id="id_user" name="id_user" value="<?= $this->session->userdata('id_user'); ?>"> -->
                 <input type="hidden" id="barang_id" name="barang_id" value="<?= $a->id_barang ?>">
                 <div class="form-group row">
                     <label for="NIM" class="col-sm-2 col-form-label">NIM</label>
@@ -56,7 +58,7 @@ foreach ($query->result() as $a) {
                 <div class="form-group row">
                     <label for="bukti" class="col-sm-2 col-form-label">Lampiran/Bukti</label>
                     <div class="col-sm-10">
-                        <input type="file" class="form-control-file" name="bukti" id="bukti">
+                        <input type="file" class="form-control-file" name="bukti" id="bukti" required>
                     </div>
                 </div>
                 <div class="form-group row">

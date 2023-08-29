@@ -39,8 +39,8 @@ class Login extends CI_Controller
                 $sess_data['nama'] = $user_data->nama;
                 $sess_data['nim'] = $user_data->nim;
                 $sess_data['unit'] = $user_data->unit;
-                $sess_data['id_pengguna'] = $user_data->id_pengguna;
-                $sess_data['id_user'] = $user_data->id_user; // Assuming 'user_level' is the column name for the user level
+                $sess_data['id_pengguna'] = $user_data->id_pengguna; 
+                $sess_data['id_user'] = $user_data->id_user;// Assuming 'user_level' is the column name for the user level
                 $this->session->set_userdata($sess_data);
 
                 // Redirect users based on their user levels

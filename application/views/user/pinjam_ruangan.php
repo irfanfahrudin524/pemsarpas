@@ -18,31 +18,32 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="nama" class="col-sm-2 col-form-label">Nama</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="NAMA" value="<?= $user ['NAMA']; ?>" readonly>
-                </div>
-            </div>
-            <input type="hidden" id="user_id" name="user_id" value="<?= $user['id'];?>">
-            <input type="hidden" id="barang_id" name="barang_id" value="<?= $r->id_ruang ?>">
-            <div class="form-group row">
-                <label for="NIM" class="col-sm-2 col-form-label">NIM</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="NIM" value="<?= $user['NIM'] ; '' ?>" readonly>
-                </div>
-            </div>
-            <div class="form-group row">
-                    <label for="unit" class="col-sm-2 col-form-label">Unit</label>
+                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="unit" value="<?= $user['unit']; ?>" readonly>
+                        <input type="text" class="form-control" id="nama" value="<?= $this->session->userdata('nama'); ?>" readonly>
                     </div>
                 </div>
-            <div class="form-group row">
-                <label for="tgl_pinjam" class="col-sm-2 col-form-label">Tanggal Pinjam</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control" name="tanggal" id="tgl_pinjam" placeholder="Tanggal">
+                <input type="hidden" id="id_pengguna" name="id_pengguna" value="<?= $pengguna['id_pengguna']; ?>">
+                <input type="hidden" id="barang_id" name="barang_id" value="<?= $r->id_ruang ?>">
+                <div class="form-group row">
+                    <label for="NIM" class="col-sm-2 col-form-label">NIM</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nim" value="<?= $this->session->userdata('nim'); ?>" readonly>
+                    </div>
                 </div>
-            </div>
+                <div class="form-group row">
+                    <label for="unit" class="col-sm-2 col-form-label">Unit</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="unit" value="<?= $this->session->userdata('unit'); ?>" readonly>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="tgl_pinjam" class="col-sm-2 col-form-label">Tanggal Pinjam</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" name="tanggal" id="tanggal" placeholder="Tanggal" value="<?php echo date('Y-m-d'); ?>">
+
+                    </div>
+                </div>
             <div class="form-group row">
                 <label for="alasan" class="col-sm-2 col-form-label">Alasan Pinjam</label>
                 <div class="col-sm-10">
